@@ -1,46 +1,47 @@
-# SimpleToDo-React App
+# Simple ToDo React
 
-## About 💁
+## 💁 About the project
 
-I have started this project with the purpose of learning how to structure a Web App of a base-level complexity integrating the Redux logic.
+A Task Manager application based on **ReactJS + Redux**.
 
-At the time of the creation of the application, I have no experience with either Redux, or with a ReactJS, or with other technologies, only the experience of HTML, CSS and Vanilla JS ES6+
+## 📖 Technology
 
-## Application Design
+JavaScript ES6+ ReactJS Redux Styled-Components Firebase
 
-![App Disign](./README-preview.jpeg)
+## 🔥 Packages
 
-## 🚀 Technologies
+- [ ] React
+- [ ] Redux
+- [ ] React Router
+- [ ] React Hooks
+- [ ] Styled Components
+- [ ] Framer Motion
+- [ ] Firebase
+- [ ] Axios
 
-- **ReactJS**
-- **React Router**
-- **Redux**
-- **Styled-Components**
+## Design
 
-## To Do
+![Main Page](./preview/main.jpeg)
 
-- [ ] Add favicon
+## Functionality
 
-## Diagrams
+- [ ] Registration / Login
+- [ ] Sort / Search Tasks
+- [ ] Form validation
+- [ ] Adding photo, video, audio content to the task
+- [ ] Record / listen to voice messages to the task
+- [ ] Task statistics charts
+- [ ] Grouping tasks
+- [ ] Restricting access to tasks / linking tasks to multiple users
+- [ ] Calendar Reminder
+- [ ] Drag & Drop API
+- [ ] Light / Dark theme
 
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+## Graphs / Diagrams
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
+## 😅 ToDo list
 
-Need to edit a flow chart:
+- [ ] Add Favicon
+- [ ] Add Jest
 
-```mermaid
-graph LR
-A((isAuthored?)) -- true --> B(Log-in)
-A -- false --> C(Sing-in)
-B --> D{HomePage}
-C --> B(Log-in)
-```
+## Installation
