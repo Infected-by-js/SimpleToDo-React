@@ -47,3 +47,53 @@ export const BtnMinifySidebar = styled.button`
 	background: #fff;
 	box-shadow: 1px 2px 4px #8ca4d8;
 `;
+
+// body
+
+export const Body = styled.div``;
+export const BodyNav = styled.nav``;
+export const NavList = styled.ul``;
+export const NavItem = styled.li`
+	display: flex;
+	margin-bottom: 27px;
+`;
+export const Link = styled.a`
+	display: flex;
+	align-items: center;
+	flex: 1;
+`;
+
+export const ItemIcon = styled.span`
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+`;
+export const ItemTitle = styled.span`
+	font-size: 16px;
+	font-weight: 500;
+`;
+
+export const BtnAddNewTask = styled.button`
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+`;
+export const ActiveTasksBanner = styled.span`
+	margin-right: 20px;
+	display: flex;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	border-radius: 4px;
+	background: var(--color-red);
+`;
