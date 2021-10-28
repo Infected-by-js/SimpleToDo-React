@@ -16,54 +16,56 @@ export const Sidebar = () => {
 				</S.BtnMinifySidebar>
 			</S.Header>
 
-			<div className="sidebar__body">
-				<nav className="body__nav">
-					<ul>
-						<li className="overview">
-							<a href="#">
-								<span className="icon">
+			<S.Body>
+				<S.BodyNav>
+					<S.NavList>
+						<S.NavItem className="overview">
+							<S.Link href="#">
+								<S.ItemIcon>
 									<Images.Overview />
-								</span>
-								<span>Overview</span>
-							</a>
-						</li>
-						<li className="Tasks">
-							<a href="#">
-								<span className="icon">
-									<Images.Overview />
-								</span>{' '}
-								<span>Tasks</span>
-							</a>
-							<button className="addNewTask">
-								<span className="addNewTaskIcon"></span>
-							</button>
-							<span className="activeTasksBanner">4</span>
-						</li>
-						<li className="groups">
-							<a href="#">
-								<span className="icon">
+								</S.ItemIcon>
+								<S.ItemTitle>Overview</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+						<S.NavItem className="Tasks">
+							<S.Link href="#">
+								<S.ItemIcon>
+									<Images.Tasks />
+								</S.ItemIcon>
+								<S.ItemTitle>Tasks</S.ItemTitle>
+							</S.Link>
+							<S.BtnAddNewTask>
+								<Images.Plus />
+							</S.BtnAddNewTask>
+							<S.ActiveTasksBanner>4</S.ActiveTasksBanner>
+						</S.NavItem>
+						<S.NavItem className="groups">
+							<S.Link href="#">
+								<S.ItemIcon>
 									<Images.Groups />
-								</span>{' '}
-								<span>Groups</span>
-							</a>
-						</li>
-						<li className="stats">
-							<a href="#">
-								<span className="icon">
+								</S.ItemIcon>
+								<S.ItemTitle>Groups</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+						<S.NavItem className="Stats">
+							<S.Link href="#">
+								<S.ItemIcon>
 									<Images.Stats />
-								</span>{' '}
-								<span>Stats</span>
-							</a>
-						</li>
-						<li className="calendar">
-							<a href="#">
-								<span className="icon"></span> <Images.Calendar />
-								<span>Calendar</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+								</S.ItemIcon>
+								<S.ItemTitle>Stats</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+						<S.NavItem className="calendar">
+							<S.Link href="#">
+								<S.ItemIcon>
+									<Images.Calendar />
+								</S.ItemIcon>
+								<S.ItemTitle>Calendar</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+					</S.NavList>
+				</S.BodyNav>
+			</S.Body>
 
 			<div className="sidebar__footer">
 				<nav className="footer__nav">

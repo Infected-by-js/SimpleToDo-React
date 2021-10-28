@@ -7,6 +7,7 @@ export { Stats } from './iconStats.jsx';
 export { Calendar } from './iconCalendar.jsx';
 export { Settings } from './iconSettings.jsx';
 export { LogOut } from './iconLogOut.jsx';
+export { Plus } from './iconPlus.jsx';
 
 //themes
 export { ThemeDark } from './iconThemeDark';
