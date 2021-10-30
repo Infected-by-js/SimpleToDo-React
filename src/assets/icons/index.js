@@ -1,6 +1,6 @@
 // sidebar
 export { Arrow } from './iconArrow.jsx';
-export { Overview } from './iconOverview.jsx';
+export { Home } from './iconHome.jsx';
 export { Tasks } from './iconTasks.jsx';
 export { Groups } from './iconGroups.jsx';
 export { Stats } from './iconStats.jsx';
