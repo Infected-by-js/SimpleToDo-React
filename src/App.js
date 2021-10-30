@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './styles/AppStyled';
+import * as S from './AppStyled';
 import { Sidebar } from './components/Sidebar';
 
 const App = () => {
