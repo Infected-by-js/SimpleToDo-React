@@ -50,7 +50,9 @@ export const BtnMinifySidebar = styled.button`
 
 // body
 
-export const Body = styled.div``;
+export const Body = styled.div`
+	margin-bottom: 131px;
+`;
 export const BodyNav = styled.nav``;
 export const NavList = styled.ul``;
 export const NavItem = styled.li`
@@ -97,3 +99,42 @@ export const ActiveTasksBanner = styled.span`
 	border-radius: 4px;
 	background: var(--color-red);
 `;
+
+//footer
+
+export const Footer = styled.div``;
+export const FooterNav = styled.nav`
+	margin-bottom: 51px;
+`;
+
+//theme
+export const ThemeSwitcher = styled.div`
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 218px;
+	height: 47px;
+	background: var(--color-background-inactive);
+	border-radius: 20px;
+`;
+
+export const ThemeButtonWrapp = styled.label`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 40px;
+	border-radius: 20px;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+
+	input {
+		display: none;
+	}
+`;
+
+export const ThemeIcon = styled.span`
+	margin-right: 10px;
+`;
+
+export const ThemeText = styled.span``;

@@ -67,39 +67,46 @@ export const Sidebar = () => {
 				</S.BodyNav>
 			</S.Body>
 
-			<div className="sidebar__footer">
-				<nav className="footer__nav">
-					<ul>
-						<li className="settings">
-							<a href="#">
-								<span className="icon"></span> <Images.Settings />
-								<span>Settings</span>
-							</a>
-						</li>
-						<li className="logout">
-							<a href="#">
-								<span className="icon"></span>
-								<Images.LogOut /> <span>Log Out</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+			<S.Footer>
+				<S.FooterNav>
+					<S.NavList>
+						<S.NavItem className="settings">
+							<S.Link href="#">
+								<S.ItemIcon>
+									<Images.Settings />
+								</S.ItemIcon>
+								<S.ItemTitle>Settings</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+						<S.NavItem className="logout">
+							<S.Link href="#">
+								<S.ItemIcon>
+									<Images.LogOut />
+								</S.ItemIcon>
+								<S.ItemTitle>Log Out</S.ItemTitle>
+							</S.Link>
+						</S.NavItem>
+					</S.NavList>
+				</S.FooterNav>
 
-				<div className="themeSwitcher">
-					<label>
-						<span>
+				<S.ThemeSwitcher>
+					<S.ThemeButtonWrapp theme="light" _position="left">
+						<S.ThemeIcon>
 							<Images.ThemeLight />
-						</span>
+						</S.ThemeIcon>
+						<S.ThemeText>Light</S.ThemeText>
 						<input type="radio" name="theme" value="light" defaultChecked />
-					</label>
-					<label>
-						<input type="radio" name="theme" value="dark" />
-						<span>
+					</S.ThemeButtonWrapp>
+
+					<S.ThemeButtonWrapp theme="dark" _position="right">
+						<S.ThemeIcon>
 							<Images.ThemeDark />
-						</span>
-					</label>
-				</div>
-			</div>
+						</S.ThemeIcon>
+						<S.ThemeText>Dark</S.ThemeText>
+						<input type="radio" name="theme" value="dark" />
+					</S.ThemeButtonWrapp>
+				</S.ThemeSwitcher>
+			</S.Footer>
 		</S.Sidebar>
 	);
 };
