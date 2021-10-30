@@ -19,11 +19,12 @@ export const NavItem = styled.li`
 			stroke: var(--color-violet);
 		}
 	}
-`;
-export const Link = styled.a`
-	display: flex;
-	align-items: center;
-	flex: 1;
+
+	a {
+		display: flex;
+		align-items: center;
+		flex: 1;
+	}
 `;
 
 export const ItemIcon = styled.span`

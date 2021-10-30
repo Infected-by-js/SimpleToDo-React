@@ -7,16 +7,16 @@ import { SidebarThemeSwitch } from '../SidebarThemeSwitch/';
 
 // TODO: need refactor below
 const bodyNavItems = [
-	{ Icon: Images.Overview, title: 'Overview', value: 'overview' },
-	{ Icon: Images.Tasks, title: 'Tasks', value: 'tasks' },
-	{ Icon: Images.Groups, title: 'Groups', value: 'groups' },
-	{ Icon: Images.Stats, title: 'Stats', value: 'stats' },
-	{ Icon: Images.Calendar, title: 'Calendar', value: 'calendar' },
+	{ Icon: Images.Home, title: 'Home', routeTo: 'home' },
+	{ Icon: Images.Tasks, title: 'Tasks', routeTo: 'tasks' },
+	{ Icon: Images.Groups, title: 'Groups', routeTo: 'groups' },
+	{ Icon: Images.Stats, title: 'Stats', routeTo: 'stats' },
+	{ Icon: Images.Calendar, title: 'Calendar', routeTo: 'calendar' },
 ];
 
 const footerNavItems = [
-	{ Icon: Images.Settings, title: 'Settings', value: 'settings' },
-	{ Icon: Images.LogOut, title: 'LogOut', value: 'logOut' },
+	{ Icon: Images.Settings, title: 'Settings', routeTo: 'settings' },
+	{ Icon: Images.LogOut, title: 'LogOut', routeTo: 'logout' },
 ];
 
 const userName = 'example@example.com';

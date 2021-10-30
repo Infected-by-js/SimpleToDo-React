@@ -1,5 +1,5 @@
 import React from 'react';
-export const Overview = () => {
+export const Home = () => {
 	return (
 		<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g stroke="#555555">
