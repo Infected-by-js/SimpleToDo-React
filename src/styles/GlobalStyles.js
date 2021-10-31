@@ -36,6 +36,7 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif, system-ui;
 	color: var(--color-black);
+  outline: none;
 
   }
 

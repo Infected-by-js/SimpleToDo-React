@@ -7,7 +7,7 @@ export const NavList = ({ items }) => {
 	return (
 		<S.NavList>
 			{items.map((item) => (
-				<NavItem key={item.value} {...item} />
+				<NavItem key={item.title} {...item} />
 			))}
 		</S.NavList>
 	);
