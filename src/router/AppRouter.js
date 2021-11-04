@@ -1,24 +1,50 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { privateRoutes, publicRoutes } from './routes';
-import { OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../utils/consts';
+import { OverviewPage } from '../pages/OverviewPage';
+import { SignUpPage } from '../pages/AuthSignUpPage';
+import { LoginPage } from '../pages/AuthLoginPage';
+import { LOGIN_ROUTE, OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../contants/routes';
+import { useAuth } from '../hooks/useAuth';
+import PropTypes from 'prop-types';
 
 export const AppRouter = () => {
-	const user = false;
-
-	return user ? (
+	return (
 		<Switch>
-			{privateRoutes.map(({ path, Component, exact }) => (
-				<Route key={path} path={path} component={Component} exact={exact} />
-			))}
+			<ProtectedRoute path={OVERVIEW_ROUTE} exact>
+				<OverviewPage />
+			</ProtectedRoute>
+			<Route path={SIGN_UP_ROUTE}>
+				<SignUpPage />
+			</Route>
+			<Route path={LOGIN_ROUTE}>
+				<LoginPage />
+			</Route>
 			<Redirect to={OVERVIEW_ROUTE} />
 		</Switch>
-	) : (
-		<Switch>
-			{publicRoutes.map(({ path, Component, exact }) => (
-				<Route key={path} path={path} component={Component} exact={exact} />
-			))}
-			<Redirect to={SIGN_UP_ROUTE} />
-		</Switch>
 	);
+};
+
+const ProtectedRoute = ({ path, children, ...rest }) => {
+	const { authed } = false;
+
+	return (
+		<Route
+			{...rest}
+			render={({ location }) => {
+				return authed ? (
+					children
+				) : (
+					<>
+						<Redirect to={LOGIN_ROUTE} />
+					</>
+				);
+			}}
+		/>
+	);
+};
+
+ProtectedRoute.propTypes = {
+	path: PropTypes.string.isRequired,
+	children: PropTypes.object.isRequired,
+	rest: PropTypes?.any,
 };

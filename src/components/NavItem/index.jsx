@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const NavItem = ({ Icon, title, routeTo }) => {
 	return (
 		<S.NavItem>
-			<Link to={`/${routeTo}`}>
+			<Link to={routeTo}>
 				<S.ItemIcon>
 					<Icon />
 				</S.ItemIcon>

@@ -1,13 +1,13 @@
 import React, { createContext } from 'react';
 import { render } from 'react-dom';
+
 import App from './App';
 import { Global } from './styles/GlobalStyles';
-import { firebase, auth, firestore } from 'firebase/app';
-
-const Context = createContext(null);
+import { firebase, auth, firestore } from './lib/firebase';
+import { firebaseContext } from './context/firebaseContext';
 
 render(
-	<Context.Provider
+	<firebaseContext.Provider
 		value={{
 			firebase,
 			auth,
@@ -16,6 +16,6 @@ render(
 	>
 		<Global />
 		<App />
-	</Context.Provider>,
+	</firebaseContext.Provider>,
 	document.getElementById('root')
 );

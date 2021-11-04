@@ -46,7 +46,8 @@ export const Global = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EBECED;
+    background-color: #d3d5d7 ;
+
   }
   
   a {

@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import signBackground from '../../../assets/signup-background.png';
+import signBackground from '../../assets/signup-background.png';
 
 export const Container = styled.div`
 	padding: 30px;
