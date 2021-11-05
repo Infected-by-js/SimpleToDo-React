@@ -1,22 +1,16 @@
 import React from 'react';
 import * as S from './styles.js';
 import * as Images from '../../assets/icons';
-import { NavList } from '../NavList';
-import { UserProfile } from '../UserProfile/';
-import { SidebarThemeSwitch } from '../SidebarThemeSwitch/';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import { LOGIN_ROUTE, OVERVIEW_ROUTE } from '../../constants/routes.js';
-import { useAuth } from '../../hooks/useAuth.js';
+import { UserProfile } from '../UserProfile/index.jsx';
 
-// TODO: need refactor below
-const bodyNavItems = [
-	{ Icon: Images.Overview, title: 'Overview', routeTo: OVERVIEW_ROUTE },
-	{ Icon: Images.Groups, title: 'Groups', routeTo: OVERVIEW_ROUTE },
-	{ Icon: Images.Stats, title: 'Stats', routeTo: OVERVIEW_ROUTE },
-	{ Icon: Images.Calendar, title: 'Calendar', routeTo: OVERVIEW_ROUTE },
-];
-
-const userName = 'example@example.com';
+// const bodyNavItems = [
+// 	{ Icon: Images.Overview, title: 'Overview', routeTo: OVERVIEW_ROUTE },
+// 	{ Icon: Images.Groups, title: 'Groups', routeTo: OVERVIEW_ROUTE },
+// 	{ Icon: Images.Stats, title: 'Stats', routeTo: OVERVIEW_ROUTE },
+// 	{ Icon: Images.Calendar, title: 'Calendar', routeTo: OVERVIEW_ROUTE },
+// ];
 
 export const Sidebar = () => {
 	const history = useHistory();
@@ -26,32 +20,33 @@ export const Sidebar = () => {
 	};
 
 	return (
-		<S.Sidebar>
+		<S.Container>
+			<S.MainTitle>Simple To Do React</S.MainTitle>
 			<S.Header>
-				<S.Title>Simple To Do App</S.Title>
-				<UserProfile userName={userName} />
-				<S.BtnMinifySidebar>
-					<Images.Arrow />
-				</S.BtnMinifySidebar>
+				<UserProfile userName={'example@example.com'} />
+				<S.SidebarBtnMinify>
+					<Images.IconArrow />
+				</S.SidebarBtnMinify>
 			</S.Header>
-
-			<S.BodyNav>
-				<NavList items={bodyNavItems} />
-			</S.BodyNav>
-
-			<S.Footer>
-				<S.FooterNav>
+			<S.Body>
+				<nav>
 					<ul>
-						<li>
-							<button>Setting</button>
-						</li>
-						<li>
-							<button onClick={handleSignOut}>Log Out</button>
-						</li>
+						<S.NavItem>
+							<NavLink to={OVERVIEW_ROUTE}>
+								<S.ItemIcon>
+									<Images.IconOverview />
+								</S.ItemIcon>
+								<S.ItemTitle>Overview</S.ItemTitle>
+							</NavLink>
+							<S.BtnAddNewTask>
+								<Images.IconPlus />
+							</S.BtnAddNewTask>
+							<S.BannerActiveTask>{'9'}</S.BannerActiveTask>
+						</S.NavItem>
 					</ul>
-				</S.FooterNav>
-			</S.Footer>
-			<SidebarThemeSwitch />
-		</S.Sidebar>
+				</nav>
+			</S.Body>
+			<S.Footer></S.Footer>
+		</S.Container>
 	);
 };

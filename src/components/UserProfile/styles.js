@@ -15,6 +15,6 @@ export const UserAvatar = styled.img.attrs({
 `;
 export const UserName = styled.span`
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1;
 `;

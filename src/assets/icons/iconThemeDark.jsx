@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ThemeDark = () => {
+export const IconThemeDark = () => {
 	return (
 		<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M8.25 5.89917L0 18H16.5L8.25 5.89917Z" fill="#673AB7" />

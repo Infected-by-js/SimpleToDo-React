@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const LogOut = () => {
+export const IconLogOut = () => {
 	return (
 		<svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g stroke="#555555">

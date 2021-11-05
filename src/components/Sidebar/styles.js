@@ -1,24 +1,25 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
-export const Sidebar = styled.div`
+export const Container = styled.div`
 	padding: 48px 0 60px 40px;
-	width: 301px;
+	width: 300px;
 	height: 100%;
 	border-right: 2px solid var(--color-border);
 `;
 
 export const Header = styled.div`
 	position: relative;
+	margin-bottom: 40px;
 `;
 
-export const Title = styled.h1`
+export const MainTitle = styled.h1`
 	margin-bottom: 29px;
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 1;
 `;
 
-export const BtnMinifySidebar = styled.button`
+export const SidebarBtnMinify = styled.button`
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -26,50 +27,100 @@ export const BtnMinifySidebar = styled.button`
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background: #fff;
-	box-shadow: 1px 2px 4px #8ca4d8;
+	background-image: url();
+	background-color: ${({ theme }) => theme.currentTheme.backgroundColor};
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
 `;
 
-// body
-export const BodyNav = styled.nav`
-	margin-bottom: 180px;
+export const Body = styled.div``;
+
+export const NavItem = styled.li`
+	display: flex;
+	margin-bottom: 27px;
+	margin-right: -1px;
+	border-right: 4px solid transparent;
+	transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+	& g {
+		transition: stroke 0.15s ease-in-out;
+	}
+
+	&:hover {
+		border-color: var(--color-violet);
+		color: var(--color-violet);
+
+		& g {
+			stroke: var(--color-violet);
+		}
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		flex: 1;
+	}
 `;
+
+export const ItemIcon = styled.span`
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+
+	svg {
+		width: 22px;
+		height: 22px;
+	}
+`;
+export const ItemTitle = styled.span`
+	font-size: 18px;
+	font-weight: 500;
+	color: inherit;
+	cursor: pointer;
+`;
+
+// // body
+// export const BodyNav = styled.nav`
+// 	margin-bottom: 180px;
+// `;
 
 export const BtnAddNewTask = styled.button`
 	margin-right: 15px;
 	display: flex;
 	align-items: center;
 
-	& path,
-	& circle {
-		transition: stroke 0.15s ease-in-out;
-	}
+	& svg {
+		width: 22px;
+		height: 22px;
 
-	&:hover {
 		& path,
 		& circle {
-			stroke: var(--color-violet);
+			transition: stroke 0.15s ease-in-out;
+		}
+
+		&:hover {
+			& path,
+			& circle {
+				stroke: var(--color-violet);
+			}
 		}
 	}
 `;
-export const ActiveTasksBanner = styled.span`
+export const BannerActiveTask = styled.span`
 	margin-right: 20px;
 	display: flex;
 	align-self: center;
 	align-items: center;
 	justify-content: center;
-	width: 20px;
-	height: 20px;
-	color: #fff;
-	font-size: 10px;
+	width: 24px;
+	height: 24px;
+	color: ${({ theme }) => theme.currentTheme.button.fontColor};
+	font-size: 16px;
 	font-weight: 700;
 	border-radius: 4px;
-	background: var(--color-violet);
+	background: ${({ theme }) => theme.currentTheme.primaryColor};
+	user-select: none;
 `;
 
 //footer
 
 export const Footer = styled.div``;
-export const FooterNav = styled.nav`
-	margin-bottom: 50px;
-`;
