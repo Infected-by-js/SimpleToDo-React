@@ -3,16 +3,18 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { OverviewPage } from '../pages/OverviewPage';
 import { SignUpPage } from '../pages/AuthSignUpPage';
 import { LoginPage } from '../pages/AuthLoginPage';
-import { LOGIN_ROUTE, OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../contants/routes';
-import { useAuth } from '../hooks/useAuth';
+import { LOGIN_ROUTE, OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../constants/routes';
 import PropTypes from 'prop-types';
 
 export const AppRouter = () => {
 	return (
 		<Switch>
-			<ProtectedRoute path={OVERVIEW_ROUTE} exact>
+			{/* <ProtectedRoute path={OVERVIEW_ROUTE} exact>
 				<OverviewPage />
-			</ProtectedRoute>
+			</ProtectedRoute> */}
+			<Route path={OVERVIEW_ROUTE} exact>
+				<OverviewPage />
+			</Route>
 			<Route path={SIGN_UP_ROUTE}>
 				<SignUpPage />
 			</Route>
@@ -24,8 +26,8 @@ export const AppRouter = () => {
 	);
 };
 
-const ProtectedRoute = ({ path, children, ...rest }) => {
-	const { authed } = false;
+const ProtectedRoute = ({ children, ...rest }) => {
+	const authed = false;
 
 	return (
 		<Route

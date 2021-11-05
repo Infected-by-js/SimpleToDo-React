@@ -1,81 +1,51 @@
+import React from 'react';
 import propTypes from 'prop-types';
-import React, { useContext } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ThemeContext } from 'styled-components';
+import { Link, useHistory } from 'react-router-dom';
+
 import * as S from './styles';
-import * as Images from '../../assets/icons';
-import { SIGN_UP_ROUTE } from '../../contants/routes';
+import { OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../../constants/routes';
+
+import { FormInput } from '../../components/FormInput';
+import { Button } from '../../UI/Button/';
+import { EnterWithBlock } from '../../components/EnterWithBlock';
+import { IconMessage, IconLock } from '../../assets/icons';
 
 export const LoginPage = () => {
-	const { setIsDarkTheme } = useContext(ThemeContext);
+	const history = useHistory();
 
 	const toggleTheme = (e) => {
 		e.preventDefault();
-		setIsDarkTheme((isDarkTheme) => !isDarkTheme);
+		history.push(OVERVIEW_ROUTE);
 	};
 
 	return (
 		<S.Container>
 			<S.Content>
 				<S.Form onSubmit={toggleTheme}>
-					<S.FormTitle>Log In</S.FormTitle>
-					<S.InputWrapp style={{ marginBottom: 10 }}>
-						<S.InputLabel>
-							<S.InputIcon>
-								<Images.IconMessage />
-							</S.InputIcon>
-							<S.Input type="text" placeholder="Email" />
-						</S.InputLabel>
-					</S.InputWrapp>
-					<S.InputWrapp style={{ marginBottom: 20 }}>
-						<S.InputLabel>
-							<S.InputIcon>
-								<Images.IconLock />
-							</S.InputIcon>
-							<S.Input type="password" placeholder="Password" />
-						</S.InputLabel>
-						<S.ButtonVisibleWrap>
-							<S.ButtonVisibleLabel>
-								<S.ButtonVisible />
-								<S.ButtonVisibleIcon>
-									<Images.IconVisible />
-								</S.ButtonVisibleIcon>
-							</S.ButtonVisibleLabel>
-						</S.ButtonVisibleWrap>
-					</S.InputWrapp>
-
+					<S.FormTitle>Log-In</S.FormTitle>
+					<FormInput
+						Icon={IconMessage}
+						type="email"
+						placeholder="Email"
+						style={{ marginBottom: 10 }}
+					/>
+					<FormInput
+						Icon={IconLock}
+						type="password"
+						placeholder="Password"
+						style={{ marginBottom: 20 }}
+					/>
 					<S.FoggotPassword>
 						Foggot <span>Password?</span>
 					</S.FoggotPassword>
-
-					<S.FormSubmitButton>LOG IN</S.FormSubmitButton>
+					<Button>LOG IN</Button>
 				</S.Form>
 
-				<S.CredentialWrapp>
-					<S.EnterWith>{'Log-in'} with</S.EnterWith>
-					<S.CredentialList>
-						<S.CredentialItem>
-							<S.CredentialButton>
-								<Images.IconGithub />
-							</S.CredentialButton>
-						</S.CredentialItem>
-						<S.CredentialItem>
-							<S.CredentialButton>
-								<Images.IconGoogle />
-							</S.CredentialButton>
-						</S.CredentialItem>
-						<S.CredentialItem>
-							<S.CredentialButton>
-								<Images.IconAnonymous />
-							</S.CredentialButton>
-						</S.CredentialItem>
-					</S.CredentialList>
-				</S.CredentialWrapp>
-
-				<S.DontHaveAccount>
-					Don`t have an account? <Link to={SIGN_UP_ROUTE}>Register now</Link>
-				</S.DontHaveAccount>
+				<EnterWithBlock enterType="Login" />
+				<S.DontHaveAnAccount>
+					Don`t have an account?
+					<Link to={SIGN_UP_ROUTE}>Register now</Link>
+				</S.DontHaveAnAccount>
 			</S.Content>
 		</S.Container>
 	);

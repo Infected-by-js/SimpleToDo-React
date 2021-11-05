@@ -12,13 +12,7 @@ export { Plus } from './iconPlus';
 export { ThemeDark } from './iconThemeDark';
 export { ThemeLight } from './iconThemeLight';
 
-//social
-export { IconGithub } from './IconCredentialGithub';
-export { IconGoogle } from './IconCredentialGoogle';
-export { IconAnonymous } from './IconCredentialAnonymous';
-
 // form
 export { IconUser } from './IconFormUser';
 export { IconLock } from './IconFormLock';
 export { IconMessage } from './IconFormMessage';
-export { IconVisible } from './IconFormVisible';

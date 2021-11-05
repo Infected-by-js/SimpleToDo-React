@@ -5,7 +5,7 @@ import { NavList } from '../NavList';
 import { UserProfile } from '../UserProfile/';
 import { SidebarThemeSwitch } from '../SidebarThemeSwitch/';
 import { Link, useHistory } from 'react-router-dom';
-import { LOGIN_ROUTE, OVERVIEW_ROUTE } from '../../contants/routes.js';
+import { LOGIN_ROUTE, OVERVIEW_ROUTE } from '../../constants/routes.js';
 import { useAuth } from '../../hooks/useAuth.js';
 
 // TODO: need refactor below
@@ -20,12 +20,9 @@ const userName = 'example@example.com';
 
 export const Sidebar = () => {
 	const history = useHistory();
-	const { logout } = useAuth();
 
 	const handleSignOut = () => {
-		logout().then(() => {
-			history.push(LOGIN_ROUTE);
-		});
+		history.push(LOGIN_ROUTE);
 	};
 
 	return (
