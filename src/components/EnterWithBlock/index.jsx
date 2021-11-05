@@ -29,5 +29,5 @@ export const EnterWithBlock = ({ enterType, ...props }) => {
 };
 
 EnterWithBlock.propTypes = {
-	enterType: PropTypes.string.isRequired,
+	enterType: PropTypes.string,
 };

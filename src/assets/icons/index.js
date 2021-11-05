@@ -1,16 +1,16 @@
 // sidebar
-export { Arrow } from './iconArrow';
-export { Overview } from './iconOverview';
-export { Groups } from './IconGroups';
-export { Stats } from './iconStats';
-export { Calendar } from './iconCalendar';
-export { Settings } from './iconSettings';
-export { LogOut } from './iconLogOut';
-export { Plus } from './iconPlus';
+export { IconArrow } from './IconArrow';
+export { IconOverview } from './IconOverview';
+export { IconGroups } from './IconGroups';
+export { IconStats } from './IconStats';
+export { IconCalendar } from './IconCalendar';
+export { IconSettings } from './IconSettings';
+export { IconLogOut } from './IconLogOut';
+export { IconPlus } from './IconPlus';
 
 //themes
-export { ThemeDark } from './iconThemeDark';
-export { ThemeLight } from './iconThemeLight';
+export { IconThemeDark } from './IconThemeDark';
+export { IconThemeLight } from './IconThemeLight';
 
 // form
 export { IconUser } from './IconFormUser';
