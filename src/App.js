@@ -1,23 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-
-import * as S from './AppStyled';
-import { Sidebar } from './components/Sidebar';
-import { privateRoutes } from './router/routes';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { AppRouter } from './router/AppRouter';
+import { useTheme } from './hooks/useTheme';
 
 const App = () => {
+	const { currentTheme, setIsDarkTheme } = useTheme();
+
 	return (
-		<BrowserRouter>
-			<S.App>
-				<Sidebar />
-				<Switch>
-					{privateRoutes.map(({ path, component, exact }) => (
-						<Route key={path} path={path} component={component} exact={exact} />
-					))}
-					<Redirect to="/" />
-				</Switch>
-			</S.App>
-		</BrowserRouter>
+		<ThemeProvider theme={{ currentTheme, setIsDarkTheme }}>
+			<BrowserRouter>
+				<AppRouter />
+			</BrowserRouter>
+		</ThemeProvider>
 	);
 };
 

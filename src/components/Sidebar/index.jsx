@@ -4,24 +4,27 @@ import * as Images from '../../assets/icons';
 import { NavList } from '../NavList';
 import { UserProfile } from '../UserProfile/';
 import { SidebarThemeSwitch } from '../SidebarThemeSwitch/';
+import { Link, useHistory } from 'react-router-dom';
+import { LOGIN_ROUTE, OVERVIEW_ROUTE } from '../../constants/routes.js';
+import { useAuth } from '../../hooks/useAuth.js';
 
 // TODO: need refactor below
 const bodyNavItems = [
-	{ Icon: Images.Home, title: 'Home', routeTo: 'home' },
-	{ Icon: Images.Tasks, title: 'Tasks', routeTo: 'tasks' },
-	{ Icon: Images.Groups, title: 'Groups', routeTo: 'groups' },
-	{ Icon: Images.Stats, title: 'Stats', routeTo: 'stats' },
-	{ Icon: Images.Calendar, title: 'Calendar', routeTo: 'calendar' },
-];
-
-const footerNavItems = [
-	{ Icon: Images.Settings, title: 'Settings', routeTo: 'settings' },
-	{ Icon: Images.LogOut, title: 'LogOut', routeTo: 'logout' },
+	{ Icon: Images.Overview, title: 'Overview', routeTo: OVERVIEW_ROUTE },
+	{ Icon: Images.Groups, title: 'Groups', routeTo: OVERVIEW_ROUTE },
+	{ Icon: Images.Stats, title: 'Stats', routeTo: OVERVIEW_ROUTE },
+	{ Icon: Images.Calendar, title: 'Calendar', routeTo: OVERVIEW_ROUTE },
 ];
 
 const userName = 'example@example.com';
 
 export const Sidebar = () => {
+	const history = useHistory();
+
+	const handleSignOut = () => {
+		history.push(LOGIN_ROUTE);
+	};
+
 	return (
 		<S.Sidebar>
 			<S.Header>
@@ -38,10 +41,17 @@ export const Sidebar = () => {
 
 			<S.Footer>
 				<S.FooterNav>
-					<NavList items={footerNavItems} />
+					<ul>
+						<li>
+							<button>Setting</button>
+						</li>
+						<li>
+							<button onClick={handleSignOut}>Log Out</button>
+						</li>
+					</ul>
 				</S.FooterNav>
-				<SidebarThemeSwitch />
 			</S.Footer>
+			<SidebarThemeSwitch />
 		</S.Sidebar>
 	);
 };

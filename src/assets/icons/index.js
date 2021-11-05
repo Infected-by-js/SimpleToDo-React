@@ -1,14 +1,18 @@
 // sidebar
-export { Arrow } from './iconArrow.jsx';
-export { Home } from './iconHome.jsx';
-export { Tasks } from './iconTasks.jsx';
-export { Groups } from './iconGroups.jsx';
-export { Stats } from './iconStats.jsx';
-export { Calendar } from './iconCalendar.jsx';
-export { Settings } from './iconSettings.jsx';
-export { LogOut } from './iconLogOut.jsx';
-export { Plus } from './iconPlus.jsx';
+export { Arrow } from './iconArrow';
+export { Overview } from './iconOverview';
+export { Groups } from './IconGroups';
+export { Stats } from './iconStats';
+export { Calendar } from './iconCalendar';
+export { Settings } from './iconSettings';
+export { LogOut } from './iconLogOut';
+export { Plus } from './iconPlus';
 
 //themes
 export { ThemeDark } from './iconThemeDark';
 export { ThemeLight } from './iconThemeLight';
+
+// form
+export { IconUser } from './IconFormUser';
+export { IconLock } from './IconFormLock';
+export { IconMessage } from './IconFormMessage';

@@ -36,6 +36,7 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif, system-ui;
 	color: var(--color-black);
+  outline: none;
 
   }
 
@@ -45,7 +46,8 @@ export const Global = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EBECED;
+    background-color: #d3d5d7 ;
+
   }
   
   a {

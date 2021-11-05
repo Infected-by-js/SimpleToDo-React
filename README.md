@@ -10,18 +10,18 @@ JavaScript ES6+ ReactJS Redux Styled-Components Firebase
 
 ## 🔥 Packages
 
-- [ ] React
+- [x] React
+- [x] React Hooks
+- [x] React Router
 - [ ] Redux
-- [ ] React Router
-- [ ] React Hooks
-- [ ] Styled Components
-- [ ] Framer Motion
 - [ ] Firebase
 - [ ] Axios
+- [x] Styled Components
+- [ ] Framer Motion
 
 ## Design
 
-![Main Page](./preview/main.jpeg)
+![Main Page](./preview/main.jpg)
 
 ## Functionality
 
@@ -43,5 +43,6 @@ JavaScript ES6+ ReactJS Redux Styled-Components Firebase
 
 - [ ] Add Favicon
 - [ ] Add Jest
+- [ ] Theme switcher like at maket
 
 ## Installation

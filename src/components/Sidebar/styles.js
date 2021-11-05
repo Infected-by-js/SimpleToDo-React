@@ -32,7 +32,7 @@ export const BtnMinifySidebar = styled.button`
 
 // body
 export const BodyNav = styled.nav`
-	margin-bottom: 131px;
+	margin-bottom: 180px;
 `;
 
 export const BtnAddNewTask = styled.button`
@@ -71,5 +71,5 @@ export const ActiveTasksBanner = styled.span`
 
 export const Footer = styled.div``;
 export const FooterNav = styled.nav`
-	margin-bottom: 51px;
+	margin-bottom: 50px;
 `;

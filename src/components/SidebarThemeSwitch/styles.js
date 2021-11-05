@@ -14,7 +14,6 @@ export const ThemeSwitcher = styled.div`
 export const ThemeButtonWrapp = styled.label`
 	padding: 8px 16px;
 	display: flex;
-	visibility: ${({ checked }) => (checked ? 'visible' : 'hidden')};
 	align-items: center;
 	justify-content: center;
 	border-radius: 20px;
