@@ -32,12 +32,15 @@ export const SidebarBtnMinify = styled.button`
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+	margin-bottom: 190px;
+`;
 
-export const NavItem = styled.li`
+export const NavItem = styled.div`
 	display: flex;
 	margin-bottom: 27px;
 	margin-right: -1px;
+	padding-right: 20px;
 	border-right: 4px solid transparent;
 	transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
@@ -76,12 +79,13 @@ export const ItemTitle = styled.span`
 	font-weight: 500;
 	color: inherit;
 	cursor: pointer;
+	flex: 1;
 `;
 
-// // body
-// export const BodyNav = styled.nav`
-// 	margin-bottom: 180px;
-// `;
+export const GroupsIcon = styled.span`
+	transform: rotate(-90deg);
+	cursor: pointer;
+`;
 
 export const BtnAddNewTask = styled.button`
 	margin-right: 15px;
@@ -106,7 +110,6 @@ export const BtnAddNewTask = styled.button`
 	}
 `;
 export const BannerActiveTask = styled.span`
-	margin-right: 20px;
 	display: flex;
 	align-self: center;
 	align-items: center;
@@ -124,3 +127,6 @@ export const BannerActiveTask = styled.span`
 //footer
 
 export const Footer = styled.div``;
+export const FooterBtnWrap = styled.div`
+	margin-bottom: 50px;
+`;

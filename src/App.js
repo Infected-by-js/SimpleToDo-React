@@ -5,10 +5,10 @@ import { AppRouter } from './router/AppRouter';
 import { useTheme } from './hooks/useTheme';
 
 const App = () => {
-	const { currentTheme, setIsDarkTheme } = useTheme();
+	const { currentTheme, isDarkTheme, setIsDarkTheme } = useTheme();
 
 	return (
-		<ThemeProvider theme={{ currentTheme, setIsDarkTheme }}>
+		<ThemeProvider theme={{ currentTheme, isDarkTheme, setIsDarkTheme }}>
 			<BrowserRouter>
 				<AppRouter />
 			</BrowserRouter>

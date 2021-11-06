@@ -14,6 +14,10 @@ const themeLight = {
 		placeholder: '#A6AEB4',
 		background: '#FFFFFF',
 	},
+	themeButton: {
+		color: '#FCFDFF',
+		background: '#F4F5F7',
+	},
 };
 
 const themeDark = {
@@ -32,6 +36,10 @@ const themeDark = {
 		borderDefault: 'transparent',
 		placeholder: '#E7EAEE',
 		background: '#575759',
+	},
+	themeButton: {
+		color: '#4D4C52',
+		background: '#313133',
 	},
 };
 
