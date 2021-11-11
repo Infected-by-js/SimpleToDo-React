@@ -3,7 +3,7 @@ import * as S from './styles.js';
 import PropTypes from 'prop-types';
 import { IconGithub, IconGoogle, IconAnonymous } from './assets';
 
-export const EnterWithBlock = ({ enterType, ...props }) => {
+export const EnterWith = ({ enterType, ...props }) => {
 	return (
 		<S.CredentialWrapp>
 			<S.EnterWith>{enterType} with</S.EnterWith>
@@ -28,6 +28,6 @@ export const EnterWithBlock = ({ enterType, ...props }) => {
 	);
 };
 
-EnterWithBlock.propTypes = {
+EnterWith.propTypes = {
 	enterType: PropTypes.string,
 };

@@ -31,9 +31,7 @@ export const Sidebar = () => {
 			<S.MainTitle>Simple To Do React</S.MainTitle>
 			<S.Header>
 				<UserProfile userName={'example@example.com'} />
-				<S.SidebarBtnMinify>
-					<Images.IconArrow />
-				</S.SidebarBtnMinify>
+				<S.SidebarBtnMinify />
 			</S.Header>
 			<S.Body>
 				<S.NavItem>

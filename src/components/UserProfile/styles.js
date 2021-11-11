@@ -17,4 +17,5 @@ export const UserName = styled.span`
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 1;
+	color: ${({ theme }) => theme.currentTheme.fontColor};
 `;

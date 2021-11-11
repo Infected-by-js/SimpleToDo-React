@@ -28,7 +28,11 @@ export const Content = styled.div`
 	align-items: center;
 	flex-direction: column;
 `;
-export const Form = styled.form``;
+export const Form = styled.form`
+	button {
+		margin: 0 auto;
+	}
+`;
 export const FormTitle = styled.h1`
 	text-align: center;
 	margin-bottom: 25px;
@@ -56,6 +60,7 @@ export const FoggotPassword = styled.p`
 `;
 
 export const AlreadyHaveAnAccount = styled.div`
+	margin-left: 10px;
 	margin-bottom: 30px;
 	text-align: start;
 	font-weight: 300;

@@ -9,7 +9,7 @@ import { LOGIN_ROUTE, OVERVIEW_ROUTE } from '../../constants/routes.js';
 
 import { Button } from '../../UI/Button/';
 import { FormInput } from '../../components/FormInput/';
-import { EnterWithBlock } from '../../components/EnterWithBlock/';
+import { EnterWith } from '../../components/EnterWith/';
 
 export const SignUpPage = () => {
 	const history = useHistory();
@@ -50,7 +50,7 @@ export const SignUpPage = () => {
 					<Button>SIGN UP</Button>
 				</S.Form>
 
-				<EnterWithBlock enterType="Sign-Up" />
+				<EnterWith enterType="Sign-Up" />
 			</S.Content>
 		</S.Container>
 	);

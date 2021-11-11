@@ -8,9 +8,17 @@ export { IconSettings } from './IconSettings';
 export { IconLogOut } from './IconLogOut';
 export { IconPlus } from './IconPlus';
 
+// body
+export { IconSearch } from './IconSearch';
+export { IconSort } from './IconSort';
+export { IconSubTasks } from './IconSubTasks';
+export { IconDate } from './IconDate';
+export { IconDescription } from './IconDescription';
+
 //themes
 export { IconThemeDark } from './IconThemeDark';
 export { IconThemeLight } from './IconThemeLight';
+export { IconOptions } from './IconOptions';
 
 // form
 export { IconUser } from './IconFormUser';

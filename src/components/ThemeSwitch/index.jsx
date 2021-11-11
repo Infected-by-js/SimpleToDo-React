@@ -14,7 +14,7 @@ export const ThemeSwitch = () => {
 	return (
 		<S.Switch>
 			<S.SwitchInput onChange={switchTheme} />
-			<S.Slider>
+			<S.Slider darkTheme={isDarkTheme}>
 				<S.SliderButton checked={!isDarkTheme}>
 					<IconThemeLight />
 					<span style={{ marginLeft: 20 }}>Light</span>

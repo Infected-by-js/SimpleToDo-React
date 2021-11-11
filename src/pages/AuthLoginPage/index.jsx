@@ -7,7 +7,7 @@ import { OVERVIEW_ROUTE, SIGN_UP_ROUTE } from '../../constants/routes';
 
 import { FormInput } from '../../components/FormInput';
 import { Button } from '../../UI/Button/';
-import { EnterWithBlock } from '../../components/EnterWithBlock';
+import { EnterWith } from '../../components/EnterWith';
 import { IconMessage, IconLock } from '../../assets/icons';
 
 export const LoginPage = () => {
@@ -38,10 +38,10 @@ export const LoginPage = () => {
 					<S.FoggotPassword>
 						Foggot <span>Password?</span>
 					</S.FoggotPassword>
-					<Button>LOG IN</Button>
+					<Button style={{ margin: '0 auto' }}>LOG IN</Button>
 				</S.Form>
 
-				<EnterWithBlock enterType="Login" />
+				<EnterWith enterType="Login" />
 				<S.DontHaveAnAccount>
 					Don`t have an account?
 					<Link to={SIGN_UP_ROUTE}>Register now</Link>

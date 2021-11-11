@@ -6,7 +6,7 @@ export const Switch = styled.label`
 	width: 170px;
 	min-height: 54px;
 	background-color: ${({ theme }) => theme.currentTheme.themeButton.background};
-	border-radius: 20px;
+	border-radius: 30px;
 	padding: 6px;
 
 	cursor: pointer;
@@ -26,11 +26,8 @@ export const Slider = styled.div`
 	width: 110px;
 	border-radius: 20px;
 	background-color: ${({ theme }) => theme.currentTheme.themeButton.color};
+	transform: ${({ darkTheme }) => (darkTheme ? 'translateX(42%)' : 'translateX(0)')};
 	transition: transform 0.3s linear;
-
-	${SwitchInput}:checked + & {
-		transform: translateX(42%);
-	}
 `;
 
 export const SliderButton = styled.span`

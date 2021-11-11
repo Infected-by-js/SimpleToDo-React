@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { AppRouter } from './router/AppRouter';
 import { useTheme } from './hooks/useTheme';
 
@@ -9,11 +9,20 @@ const App = () => {
 
 	return (
 		<ThemeProvider theme={{ currentTheme, isDarkTheme, setIsDarkTheme }}>
-			<BrowserRouter>
-				<AppRouter />
-			</BrowserRouter>
+			<StyledApp>
+				<BrowserRouter>
+					<AppRouter />
+				</BrowserRouter>
+			</StyledApp>
 		</ThemeProvider>
 	);
 };
 
 export default App;
+
+// TODO refactor this
+const StyledApp = styled.div`
+	width: 100vw;
+	height: 100vh;
+	background-color: ${({ theme }) => theme.currentTheme.overlayColor};
+`;
