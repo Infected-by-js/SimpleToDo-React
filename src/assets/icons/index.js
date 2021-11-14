@@ -14,11 +14,11 @@ export { IconSort } from './IconSort';
 export { IconSubTasks } from './IconSubTasks';
 export { IconDate } from './IconDate';
 export { IconDescription } from './IconDescription';
+export { IconOptions } from './IconOptions';
 
 //themes
 export { IconThemeDark } from './IconThemeDark';
 export { IconThemeLight } from './IconThemeLight';
-export { IconOptions } from './IconOptions';
 
 // form
 export { IconUser } from './IconFormUser';

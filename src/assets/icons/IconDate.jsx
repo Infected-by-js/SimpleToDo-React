@@ -2,7 +2,7 @@ import React from 'react';
 
 export const IconDate = () => {
 	return (
-		<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg width="28" height="24" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g stroke="#AFA9A9">
 				<path
 					d="M8.02075 4.67041V7.79406L10.1726 6.23223"
