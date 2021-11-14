@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components/macro';
 
 export const TaskWrapp = styled.div`
+	margin-bottom: 20px;
 	padding: 20px 30px;
 	border-radius: 8.5px;
 	border: 1px solid ${({ theme }) => theme.currentTheme.borderColor};
@@ -9,7 +10,7 @@ export const TaskWrapp = styled.div`
 export const Content = styled.div`
 	display: grid;
 	grid-template-columns: 3% 75% 9% 9%;
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
 	grid-column-gap: 10px;
 	grid-row-gap: 15px;
 	grid-template-areas: 'complete title priority options' 'complete description date sub-tasks';
@@ -28,14 +29,14 @@ export const CompleteCheckboxWrapp = styled.label`
 	border-color: ${({ theme }) => theme.currentTheme.fontColor};
 	cursor: pointer;
 	opacity: 0.7;
-	transition: opacity 0.15s ease-in-out;
+	transition: opacity 0.15s ease-in-out, background-color 0.15s ease-in-out;
 
 	&:hover {
 		opacity: 1;
 	}
 
-	${({ checked }) =>
-		checked &&
+	${({ done }) =>
+		done &&
 		css`
 			background-color: ${({ theme }) => theme.currentTheme.fontColor};
 		`}
@@ -51,8 +52,10 @@ export const Title = styled.h2`
 	grid-area: title;
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 1;
+	line-height: 1.5;
 	color: ${({ theme }) => theme.currentTheme.fontColor};
+	text-decoration: ${({ done }) => done && 'line-through'};
+	transition: text-decoration 0.3s ease-in-out;
 `;
 
 export const Description = styled.div`
@@ -61,13 +64,18 @@ export const Description = styled.div`
 	align-items: center;
 	opacity: 0.7;
 	color: ${({ theme }) => theme.currentTheme.fontColor};
+	text-decoration: ${({ done }) => done && 'line-through'};
+	transition: text-decoration 0.3s ease-in-out;
 
 	& g {
+		min-width: 24px;
+		max-height: 24px;
 		stroke: ${({ theme }) => theme.currentTheme.fontColor};
 	}
 
 	span {
 		color: inherit;
+		text-decoration: inherit;
 		margin-left: 10px;
 	}
 `;
@@ -121,8 +129,11 @@ export const OptionsButton = styled.button`
 	border-radius: 4px;
 	border-color: ${({ theme }) => theme.currentTheme.borderColor};
 	background-color: transparent;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
-	transition: background-color 0.15s ease-in-out;
+	& g {
+		transition: fill 0.15s ease-in-out;
+	}
 
 	&:hover {
 		background-color: ${({ theme }) => theme.currentTheme.borderColor};
@@ -144,7 +155,11 @@ export const SubTasksButton = styled.button`
 	align-items: center;
 	justify-content: center;
 	opacity: 0.7;
-	transition: background-color 0.15s ease-in-out;
+	transition: opacity 0.15s ease-in-out;
+
+	& g {
+		transition: fill 0.15s ease-in-out;
+	}
 
 	&:hover {
 		opacity: 1;

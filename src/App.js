@@ -22,6 +22,9 @@ export default App;
 
 // TODO refactor this
 const StyledApp = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100vw;
 	height: 100vh;
 	background-color: ${({ theme }) => theme.currentTheme.overlayColor};

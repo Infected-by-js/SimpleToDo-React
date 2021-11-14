@@ -138,9 +138,11 @@ export const ButtonCreateTask = styled.button`
 // `;
 
 export const ContentBody = styled.div``;
-export const ListWrapp = styled.div``;
+export const ListWrapp = styled.div`
+	margin-right: 30px;
+`;
 export const TaskList = styled.div``;
-export const Aside = styled.aside``;
+export const Aside = styled.div``;
 
 export const TasksContainer = styled.div`
 	display: flex;
